@@ -12,6 +12,7 @@ def load_model(base, finetuned, multi_gpu):
             base,
             load_in_8bit=False,
             device_map="auto",
+            offload_folder="/content/temp-offload"
         )
         
         model = PeftModel.from_pretrained(
