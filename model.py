@@ -10,7 +10,7 @@ def load_model(base, finetuned, multi_gpu):
     if not multi_gpu:
         model = LlamaForCausalLM.from_pretrained(
             base,
-            load_in_8bit=True,
+            load_in_8bit=False,
             device_map="auto",
         )
         
